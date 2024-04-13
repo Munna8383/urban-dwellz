@@ -1,0 +1,110 @@
+[
+    {
+      "estate_title": "Luxury Beachfront Villa",
+      "id": 1,
+      "segment_name": "Luxury Homes",
+      "description": "Experience unparalleled luxury living in this exquisite beachfront villa. With breathtaking ocean views from every room, this spacious estate offers 5 bedrooms, 6 bathrooms, a gourmet kitchen, private pool, and direct beach access. Perfect for those seeking the ultimate coastal retreat.",
+      "price": "$3,500,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["oceanfront views", "private pool", "gourmet kitchen"],
+      "image": "https://i.ibb.co/Q6ZDRhX/Luxury-Beachfront-Villa.jpg"
+    },
+    {
+      "estate_title": "Urban Chic Loft",
+      "id": 2,
+      "segment_name": "City Apartments",
+      "description": "Live in style in this modern loft located in the heart of the city. Featuring high ceilings, exposed brick walls, and industrial accents, this 2-bedroom loft offers a spacious open floor plan, sleek kitchen, and stunning city views. Enjoy urban living at its finest.",
+      "price": "$800,000",
+      "status": "sale",
+      "area": "1500 sq ft",
+      "location": "New York City, New York",
+      "facilities": ["high ceilings", "city views", "modern kitchen"],
+      "image": "https://i.ibb.co/XD6Y1sR/Urban-Chic-Loft.jpg"
+    },
+    {
+      "estate_title": "Cozy Mountain Cabin",
+      "id": 3,
+      "segment_name": "Vacation Rentals",
+      "description": "Escape to the mountains in this charming cabin retreat. Nestled among towering pines, this 3-bedroom cabin offers rustic charm with modern amenities. Cozy up by the fireplace, soak in the hot tub, or explore nearby hiking trails. The perfect getaway for nature lovers.",
+      "price": "$3000",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "Aspen, Colorado",
+      "facilities": ["fireplace", "hot tub", "hiking trails access"],
+      "image": "https://i.ibb.co/9228rHT/Cozy-Mountain-Cabin.jpg"
+    },
+    {
+      "estate_title": "Spacious Family Home",
+      "id": 4,
+      "segment_name": "Single-Family Homes",
+      "description": "This spacious family home offers comfort and convenience. With 4 bedrooms, 3 bathrooms, a large backyard, and a bonus room, there's plenty of space for the whole family to enjoy. Located in a quiet neighborhood, yet close to schools, parks, and shopping.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Austin, Texas",
+      "facilities": ["large backyard", "bonus room", "close to amenities"],
+      "image": "https://i.ibb.co/C7FwgKG/Spacious-Family-Home.jpg"
+    },
+    {
+      "estate_title": "Modern Downtown Condo",
+      "id": 5,
+      "segment_name": "City Apartments",
+      "description": "Live the urban lifestyle in this modern downtown condo. Featuring sleek finishes, an open floor plan, and floor-to-ceiling windows, this 1-bedroom condo offers city views and easy access to restaurants, shops, and entertainment.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "1000 sq ft",
+      "location": "Chicago, Illinois",
+      "facilities": ["modern finishes", "city views", "central location"],
+      "image": "https://i.ibb.co/vkkWNyn/Modern-Downtown-Condo.jpg"
+    },
+    {
+      "estate_title": "Lakefront Retreat",
+      "id": 6,
+      "segment_name": "Vacation Rentals",
+      "description": "Escape to this peaceful lakefront retreat. This cozy 2-bedroom cottage offers stunning lake views, a private dock, and a fire pit for evenings under the stars. Perfect for fishing, swimming, or simply relaxing by the water.",
+      "price": "$2500",
+      "status": "rent",
+      "area": "900 sq ft",
+      "location": "Lake Tahoe, Nevada",
+      "facilities": ["lakefront views", "private dock", "fire pit"],
+      "image": "https://i.ibb.co/CmL6Ccd/Lakefront-Retreat.jpg"
+    },
+    {
+      "estate_title": "Luxury Penthouse",
+      "id": 7,
+      "segment_name": "Luxury Homes",
+      "description": "Live in the lap of luxury in this stunning penthouse. With 3 bedrooms, 3.5 bathrooms, and panoramic city views, this penthouse offers the ultimate in sophisticated living. Enjoy resort-style amenities and exclusive access to concierge services.",
+      "price": "$2,000,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Miami, Florida",
+      "facilities": ["panoramic views", "resort-style amenities", "concierge services"],
+      "image": "https://i.ibb.co/yY5KJ5h/Luxury-Penthouse.jpg"
+    },
+    {
+      "estate_title": "Quaint Suburban Cottage",
+      "id": 8,
+      "segment_name": "Single-Family Homes",
+      "description": "This charming suburban cottage is the perfect place to call home. Featuring 3 bedrooms, 2 bathrooms, and a beautifully landscaped backyard, this home offers peace and tranquility just minutes from the city.",
+      "price": "$400,000",
+      "status": "sale",
+      "area": "1800 sq ft",
+      "location": "Seattle, Washington",
+      "facilities": ["landscaped backyard", "charming features", "close to city"],
+      "image": "https://i.ibb.co/JkQGdqk/Quaint-Suburban-Cottage.jpg"
+    },
+    {
+      "estate_title": "Luxury Ski Chalet",
+      "id": 9,
+      "segment_name": "Vacation Rentals",
+      "description": "Experience luxury living in this beautiful ski chalet. With ski-in/ski-out access, a private hot tub, and stunning mountain views, this 4-bedroom chalet is perfect for winter getaways. Cozy up by the fireplace after a day on the slopes.",
+      "price": "$5000",
+      "status": "rent",
+      "area": "2000 sq ft",
+      "location": "Whistler, British Columbia",
+      "facilities": ["ski-in/ski-out access", "private hot tub", "mountain views"],
+      "image": "https://i.ibb.co/1QVv6My/Luxury-Ski-Chalet.jpg"
+    }
+  ]
