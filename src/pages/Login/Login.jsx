@@ -1,7 +1,50 @@
 import { Link } from "react-router-dom";
+import { FaGoogle } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { useContext} from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+
 
 
 const Login = () => {
+
+    const {googleLogin,githubLogin}= useContext(AuthContext)
+
+     
+    const handleLogin =e =>{
+
+        e.preventDefault()
+
+        const name = e.target.email.value 
+        const password = e.target.password.value 
+
+    }
+
+    const SignINGoogle = ()=>{
+
+        googleLogin()
+        .then((result)=>{
+            console.log(result)
+        })
+        .catch((error)=>{
+            console.log(error.message)
+        })
+
+    }
+
+    const SignINGithub =()=>{
+        githubLogin()
+        .then((result)=>{
+            console.log(result)
+        })
+        .catch((error)=>{
+            console.log(error.message)
+        })
+    }
+
+
+
+
     return (
         <div>
             <div className="text-center">
@@ -10,23 +53,32 @@ const Login = () => {
             </div>
 
             <div className="md:w-3/4 lg:w-1/2 mx-auto">
-                <form className="card-body">
+                <form onSubmit={handleLogin} className="card-body">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" placeholder="Enter Email" className="input input-bordered" required />
+                        <input type="email" name="email" placeholder="Enter Email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" placeholder="Enter Password" className="input input-bordered" required />
+                        <input type="password" name="password" placeholder="Enter Password" className="input input-bordered" required />
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn bg-[#66b3ff]">Login</button>
                     </div>
                 </form>
+
+                <div className="divider divider-info">or</div>
+
+                <div className="flex justify-center gap-10 mb-5">
+
+                    <button onClick={SignINGoogle}><span className="text-blue-600 text-4xl"><FaGoogle /></span></button>
+                    <button onClick={SignINGithub}><span className="text-blue-600 text-4xl"><FaGithub /></span></button>
+
+                </div>
             </div>
 
             <div className="text-center">

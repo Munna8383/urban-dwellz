@@ -2,6 +2,19 @@ import { Link } from "react-router-dom";
 
 
 const Register = () => {
+
+
+
+    const handleRegister = e =>{
+
+        e.preventDefault()
+        const name = e.target.name.value 
+        const photo =e.target.photo.value 
+        const email = e.target.email.value 
+        const password = e.target.password.value 
+
+        console.log(name,email,photo,password)
+    }
     return (
 
 <div>
@@ -10,7 +23,7 @@ const Register = () => {
             </div>
 
             <div className="md:w-3/4 lg:w-1/2 mx-auto">
-                <form className="card-body">
+                <form onSubmit={handleRegister} className="card-body">
                 <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
