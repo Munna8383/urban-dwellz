@@ -8,6 +8,8 @@ import CardDetails from "../pages/Home/CardDetails/CardDetails";
 import About from "../pages/About/About";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import UserProfile from "../components/UserProfile/UserProfile";
+import PrivateRoute from "./PrivateRoute";
 
 
   const router = createBrowserRouter([
@@ -22,7 +24,7 @@ import Register from "../pages/Register/Register";
         },
         {
           path:"/:id",
-          element:<CardDetails></CardDetails>,
+          element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
           loader:()=>fetch("../data.json")
         },
         {
@@ -36,6 +38,10 @@ import Register from "../pages/Register/Register";
         {
           path:"/register",
           element:<Register></Register>
+        },
+        {
+          path:"/userProfile",
+          element:<UserProfile></UserProfile>
         }
       ]
     },

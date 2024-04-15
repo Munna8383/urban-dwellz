@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { useContext} from "react";
@@ -8,15 +8,28 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
 
-    const {googleLogin,githubLogin}= useContext(AuthContext)
+    const {googleLogin,githubLogin,login}= useContext(AuthContext)
+
+    const navigate = useNavigate()
+    const location = useLocation()
 
      
     const handleLogin =e =>{
 
         e.preventDefault()
 
-        const name = e.target.email.value 
+        const email = e.target.email.value 
         const password = e.target.password.value 
+        
+
+        login(email,password)
+        .then((userCredential) => {
+            // Signed in 
+            navigate(location?.state || "/")
+            // ...
+          })
+
+          e.target.reset()
 
     }
 
@@ -24,7 +37,11 @@ const Login = () => {
 
         googleLogin()
         .then((result)=>{
-            console.log(result)
+
+
+
+            navigate(location?.state || "/")
+           
         })
         .catch((error)=>{
             console.log(error.message)
@@ -35,7 +52,7 @@ const Login = () => {
     const SignINGithub =()=>{
         githubLogin()
         .then((result)=>{
-            console.log(result)
+            navigate(location?.state || "/")
         })
         .catch((error)=>{
             console.log(error.message)

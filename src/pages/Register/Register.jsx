@@ -1,11 +1,20 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Register = () => {
 
+    const{createUser,updatePhotoAndName,logout}= useContext(AuthContext)
+
 
 
     const handleRegister = e =>{
+
+        const passwordRegex = /^(?=.*[A-Z]).+$/;
+        const lowerpasswordRegex = /^(?=.*[a-z]).+$/;
+
+       
 
         e.preventDefault()
         const name = e.target.name.value 
@@ -13,7 +22,41 @@ const Register = () => {
         const email = e.target.email.value 
         const password = e.target.password.value 
 
-        console.log(name,email,photo,password)
+
+        if (!passwordRegex.test(password)) {
+            alert("password must have one uppercase letter")
+
+            return
+          }
+
+        if(!lowerpasswordRegex.test(password)){
+            alert("password must have an lower case")
+
+            return
+        }
+
+        if(password.length<6){
+            alert("password must be 6")
+
+            return
+        }
+
+
+
+
+
+      
+
+
+        createUser(email,password)
+        .then(()=>{
+            updatePhotoAndName(name,photo)
+            .then(()=>{
+                logout()
+            })
+        })
+
+        e.target.reset()
     }
     return (
 
