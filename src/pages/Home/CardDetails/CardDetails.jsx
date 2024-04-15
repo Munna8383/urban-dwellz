@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import {  useLoaderData, useParams } from "react-router-dom";
 
 
@@ -19,6 +20,9 @@ const CardDetails = () => {
    
     return (
         <div className="mt-10">
+            <Helmet>
+                <title>Details</title>
+            </Helmet>
             <div className="flex flex-col lg:flex-row items-center gap-10">
             
                    <div className="w1/2">

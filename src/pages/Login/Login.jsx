@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { useContext} from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -79,6 +80,9 @@ const Login = () => {
     return (
         <div>
             <Toaster />
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
             <div className="text-center">
                 <h1 className="text-5xl text-blue-600 font-bold">Login now!</h1>
                 <p className="py-6">Login to explore interesting features and get access to hidden pages</p>

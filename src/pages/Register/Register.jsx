@@ -1,10 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
+import {FaEye,FaEyeSlash} from "react-icons/fa"
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
+
+    const [showPassword,setShowPassword]=useState(false)
 
     const navigate = useNavigate()
 
@@ -59,7 +63,7 @@ const Register = () => {
                 logout()
 
                 setTimeout(()=>{
-                       navigate("/")
+                       navigate("/login")
 
                 },2000)
             })
@@ -72,6 +76,10 @@ const Register = () => {
 <div>
 
 <Toaster />
+
+              <Helmet>
+                <title>Register</title>
+              </Helmet>
 
             <div className="text-center">
                 <h1 className="text-5xl text-blue-600 font-bold">Register Here!</h1>
@@ -97,11 +105,17 @@ const Register = () => {
                         </label>
                         <input type="email" name="email" placeholder=" Enter Email" className="input input-bordered" required />
                     </div>
-                    <div className="form-control">
+                    <div className="form-control relative">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" name="password" placeholder=" Enter Password" className="input input-bordered" required />
+                       
+                        <input type={showPassword? "text":"password"} name="password" placeholder=" Enter Password" className=" input input-bordered" required />
+                        <span className="absolute right-12 bottom-4" onClick={()=>setShowPassword(!showPassword)}>
+                            {
+                                showPassword? <FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>
+                            }
+                        </span>
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn bg-[#66b3ff]">Register</button>
