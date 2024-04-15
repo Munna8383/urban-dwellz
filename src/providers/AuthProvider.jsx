@@ -15,7 +15,6 @@ const AuthProvider = ({children}) => {
 
     const [loading , setLoading] = useState(true)
 
-    console.log(loading)
 
     const [user,setUser]=useState(null)
 

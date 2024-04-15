@@ -3,6 +3,7 @@ import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { useContext} from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 
@@ -23,10 +24,17 @@ const Login = () => {
         
 
         login(email,password)
-        .then((userCredential) => {
+        .then(() => {
+
+            toast.success('Logged In Successfully')
             // Signed in 
-            navigate(location?.state || "/")
+            setTimeout(()=>{
+                navigate(location?.state || "/")
+            },2000)
             // ...
+          })
+          .catch(()=>{
+            toast.error("Incorrect username or password")
           })
 
           e.target.reset()
@@ -36,26 +44,32 @@ const Login = () => {
     const SignINGoogle = ()=>{
 
         googleLogin()
-        .then((result)=>{
+        .then(()=>{
 
+            toast.success('Logged In Successfully')
 
-
-            navigate(location?.state || "/")
+            setTimeout(()=>{
+                navigate(location?.state || "/")
+            },2000)
            
         })
-        .catch((error)=>{
-            console.log(error.message)
+        .catch(()=>{
+           
         })
 
     }
 
     const SignINGithub =()=>{
         githubLogin()
-        .then((result)=>{
-            navigate(location?.state || "/")
+        .then(()=>{
+
+            toast.success('Logged In Successfully')
+            setTimeout(()=>{
+                navigate(location?.state || "/")
+            },2000)
         })
-        .catch((error)=>{
-            console.log(error.message)
+        .catch(()=>{
+            toast.error("login unsuccessful")
         })
     }
 
@@ -64,6 +78,7 @@ const Login = () => {
 
     return (
         <div>
+            <Toaster />
             <div className="text-center">
                 <h1 className="text-5xl text-blue-600 font-bold">Login now!</h1>
                 <p className="py-6">Login to explore interesting features and get access to hidden pages</p>

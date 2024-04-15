@@ -1,9 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const Register = () => {
+
+    const navigate = useNavigate()
 
     const{createUser,updatePhotoAndName,logout}= useContext(AuthContext)
 
@@ -24,19 +27,19 @@ const Register = () => {
 
 
         if (!passwordRegex.test(password)) {
-            alert("password must have one uppercase letter")
+            toast.error("password must have an uppercase letter")
 
             return
           }
 
         if(!lowerpasswordRegex.test(password)){
-            alert("password must have an lower case")
+            toast.error("password must have an lowercase letter")
 
             return
         }
 
         if(password.length<6){
-            alert("password must be 6")
+            toast.error("password length mus be 6 character")
 
             return
         }
@@ -52,7 +55,13 @@ const Register = () => {
         .then(()=>{
             updatePhotoAndName(name,photo)
             .then(()=>{
+                toast.success('Registered Successfully')
                 logout()
+
+                setTimeout(()=>{
+                       navigate("/")
+
+                },2000)
             })
         })
 
@@ -61,6 +70,9 @@ const Register = () => {
     return (
 
 <div>
+
+<Toaster />
+
             <div className="text-center">
                 <h1 className="text-5xl text-blue-600 font-bold">Register Here!</h1>
             </div>
