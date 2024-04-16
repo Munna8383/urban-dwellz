@@ -5,6 +5,7 @@ import { useContext} from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
 import { Helmet } from "react-helmet-async";
+import 'animate.css';
 
 
 
@@ -55,6 +56,7 @@ const Login = () => {
            
         })
         .catch(()=>{
+            toast.error("login unsuccessful")
            
         })
 
@@ -78,18 +80,18 @@ const Login = () => {
 
 
     return (
-        <div>
+        <div className="mt-5">
             <Toaster />
             <Helmet>
                 <title>Login</title>
             </Helmet>
             <div className="text-center">
-                <h1 className="text-5xl text-blue-600 font-bold">Login now!</h1>
+                <h1  className="text-5xl text-blue-600 font-bold animate__animated animate__rotateIn">Login now!</h1>
                 <p className="py-6">Login to explore interesting features and get access to hidden pages</p>
             </div>
 
-            <div className="md:w-3/4 lg:w-1/2 mx-auto">
-                <form onSubmit={handleLogin} className="card-body">
+            <div className="md:w-3/4 lg:w-1/2 mx-auto animate__animated animate__slideInUp">
+                <form onSubmit={handleLogin} className="card-body ">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>

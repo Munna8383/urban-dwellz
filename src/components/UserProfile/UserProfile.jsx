@@ -16,13 +16,16 @@ const UserProfile = () => {
 
     return (
       
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-5">
           <Helmet>
             <title>User Profile</title>
           </Helmet>
-
+        
 
 <div className="card w-96 bg-base-500 shadow-xl">
+<div className="text-center">
+                <h1 className="text-4xl text-blue-600 font-bold animate__animated animate__rotateIn">User Profile</h1>
+            </div>
   <figure className="px-10 pt-10">
     <img src={user?.photoURL} alt="Shoes" className="rounded-xl" />
   </figure>

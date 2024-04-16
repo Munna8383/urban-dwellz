@@ -1,7 +1,7 @@
 
 import { Helmet } from "react-helmet-async";
 import {  useLoaderData, useParams } from "react-router-dom";
-
+import 'animate.css';
 
 const CardDetails = () => {
 
@@ -25,12 +25,12 @@ const CardDetails = () => {
             </Helmet>
             <div className="flex flex-col lg:flex-row items-center gap-10">
             
-                   <div className="w1/2">
+                   <div className="w1/2 animate__animated animate__backInLeft">
                    <img className="rounded-xl" src={image} alt="" />
                    </div>
             
 
-                <div className="space-y-2 w-1/2 text-center lg:text-left">
+                <div className="space-y-2 w-1/2 text-center lg:text-left animate__animated animate__backInRight">
                     <div>
                         <h1 className="text-3xl font-bold">{estate_title}</h1>
                     </div>

@@ -10,6 +10,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import UserProfile from "../components/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoute";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 
 
   const router = createBrowserRouter([
@@ -42,6 +43,10 @@ import PrivateRoute from "./PrivateRoute";
         {
           path:"/userProfile",
           element:<UserProfile></UserProfile>
+        },
+        {
+          path:"/updateProfile",
+          element:<UpdateProfile></UpdateProfile>
         }
       ]
     },

@@ -4,6 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
 import {FaEye,FaEyeSlash} from "react-icons/fa"
 import { Helmet } from "react-helmet-async";
+import 'animate.css';
 
 
 const Register = () => {
@@ -73,7 +74,7 @@ const Register = () => {
     }
     return (
 
-<div>
+<div className="mt-5">
 
 <Toaster />
 
@@ -82,10 +83,10 @@ const Register = () => {
               </Helmet>
 
             <div className="text-center">
-                <h1 className="text-5xl text-blue-600 font-bold">Register Here!</h1>
+                <h1 className="text-5xl text-blue-600 font-bold animate__animated animate__rotateIn">Register Here!</h1>
             </div>
 
-            <div className="md:w-3/4 lg:w-1/2 mx-auto">
+            <div className="md:w-3/4 lg:w-1/2 mx-auto animate__animated animate__jello">
                 <form onSubmit={handleRegister} className="card-body">
                 <div className="form-control">
                         <label className="label">
