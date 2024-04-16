@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 const UpdateProfile = () => {
@@ -35,8 +36,15 @@ const UpdateProfile = () => {
 
     }
     return (
+
+      
         <div className="mt-5 md:w-3/4 lg:w-1/2 mx-auto">
             <Toaster />
+            <Helmet>
+
+                <title>Update Profile || Urban Dwellz</title>
+            
+            </Helmet>
 
             <div className="text-center">
                 <h1 className="text-5xl text-blue-600 font-bold animate__animated animate__rotateIn">Update Profile</h1>

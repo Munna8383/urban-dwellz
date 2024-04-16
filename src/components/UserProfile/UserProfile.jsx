@@ -18,7 +18,7 @@ const UserProfile = () => {
       
         <div className="flex justify-center mt-5">
           <Helmet>
-            <title>User Profile</title>
+            <title>User Profile || Urban Dwellz</title>
           </Helmet>
         
 

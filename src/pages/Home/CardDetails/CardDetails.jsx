@@ -21,7 +21,7 @@ const CardDetails = () => {
     return (
         <div className="mt-10">
             <Helmet>
-                <title>Details</title>
+                <title>Details || Urban Dwellz</title>
             </Helmet>
             <div className="flex flex-col lg:flex-row items-center gap-10">
             

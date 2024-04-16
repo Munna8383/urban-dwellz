@@ -83,7 +83,7 @@ const Login = () => {
         <div className="mt-5">
             <Toaster />
             <Helmet>
-                <title>Login</title>
+                <title>Login || Urban Dwellz</title>
             </Helmet>
             <div className="text-center">
                 <h1  className="text-5xl text-blue-600 font-bold animate__animated animate__rotateIn">Login now!</h1>

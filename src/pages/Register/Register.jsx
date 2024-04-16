@@ -79,7 +79,7 @@ const Register = () => {
 <Toaster />
 
               <Helmet>
-                <title>Register</title>
+                <title>Register || Urban Dwellz</title>
               </Helmet>
 
             <div className="text-center">
