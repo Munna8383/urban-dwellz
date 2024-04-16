@@ -6,7 +6,7 @@ A online website where people rent residential houses.
 
 *Netlify Live Website:* [https://urban-dwellz.netlify.app//](https://urban-dwellz.netlify.app/)
 
-*Firebase Live Website:* [https://urban-dwellz.firebaseapp.com/](https://urban-dwellz.firebaseapp.com/)
+*Firebase Live Website:* [https://urban-dwellz.web.app/](https://urban-dwellz.web.app/)
 
 
 ## Features
