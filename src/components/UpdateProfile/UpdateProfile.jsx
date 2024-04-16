@@ -9,7 +9,14 @@ const UpdateProfile = () => {
    
     const navigate = useNavigate()
 
+   
+
+
+
     const {updatePhotoAndName,user}= useContext(AuthContext)
+    if(!user){
+        navigate("/login")
+      }
     const [textName,setTextName]= useState(user?.displayName)
     const [updatePhoto,setUpdatePhoto]= useState(user?.photoURL)
 

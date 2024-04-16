@@ -1,0 +1,26 @@
+[
+    {
+        "agent_name1": "John Doe",
+        "agent_image": "https://i.ibb.co/rFzk5ph/linkedin-sales-solutions-Be5a-VKFv9ho-unsplash.jpg",
+        "agent_email": "john.doe@gmail.com",
+        "agent1": "Sales Agent",
+        "contactNumber": "+1 (123) 456-7890"
+      },
+      {
+        "agent_name1": "Jane Smith",
+        "agent_image": "https://i.ibb.co/YDBMYMf/tim-van-der-kuip-CPs2-X8-JYm-S8-unsplash.jpg",
+        "agent_email": "jane.smith@yahoo.com",
+        "agent1": "Customer Service Agent",
+        "contactNumber": "+1 (234) 567-8901"
+      },
+      {
+        "agent_name1": "Alice Johnson",
+        "agent_image": "https://i.ibb.co/J7rhwS9/arlington-research-Kz8n-HVg-t-GI-unsplash.jpg",
+        "agent_email": "alice.johnson@gmail.com",
+        "agent1": "Technical Support Agent",
+        "contactNumber": "+1 (345) 678-9012"
+      }
+      
+      
+      
+]

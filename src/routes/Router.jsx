@@ -5,12 +5,12 @@ import Root from "../Root/Root";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home/Home";
 import CardDetails from "../pages/Home/CardDetails/CardDetails";
-import About from "../pages/About/About";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import UserProfile from "../components/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
+import Agents from "../pages/Agents/Agents";
 
 
   const router = createBrowserRouter([
@@ -29,10 +29,6 @@ import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
           loader:()=>fetch("../data.json")
         },
         {
-          path:"/about",
-          element:<About></About>
-        },
-        {
           path:"/login",
           element:<Login></Login>
         },
@@ -47,6 +43,11 @@ import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
         {
           path:"/updateProfile",
           element:<UpdateProfile></UpdateProfile>
+        },
+        {
+          path:"/agents",
+          element:<PrivateRoute><Agents></Agents></PrivateRoute>,
+          loader: ()=> fetch("../agent.json")
         }
       ]
     },
