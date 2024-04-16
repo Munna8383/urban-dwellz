@@ -17,6 +17,7 @@ const Navbar = () => {
           <NavLink className={({ isActive }) => isActive ? "text-blue-600 border border-blue-600 py-2 px-3 rounded-xl" : " "} to={"/agents"}>Agents</NavLink>
          {user&&   <NavLink className={({ isActive }) => isActive ? "text-blue-600 border border-blue-600 py-2 px-3 rounded-xl" : " "} to={"/userProfile"}>User Profile</NavLink>}
         {user&&  <NavLink className={({ isActive }) => isActive ? "text-blue-600 border  border-blue-600 px-3 py-2 rounded-xl" : " "} to={"/updateProfile"}>Update Profile</NavLink>}
+        
          <div className="tooltip hidden md:block" data-tip={user?.displayName||"Null"}>
          <img className="rounded-2xl" width={40} alt="Tailwind CSS Navbar component" src={user?.photoURL || "https://i.ibb.co/Hn7KVQq/corporate-user-icon.png"} />
          </div>

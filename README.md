@@ -1,8 +1,24 @@
-# React + Vite
+# Urban Dwellz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A online website where people rent residential houses.
 
-Currently, two official plugins are available:
+## Website Live Link:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*Netlify Live Website:* [https://urban-dwellz.netlify.app//](https://urban-dwellz.netlify.app/)
+
+*Firebase Live Website:* [https://urban-dwellz.firebaseapp.com/](https://urban-dwellz.firebaseapp.com/)
+
+
+## Features
+
+- User can Login and registration.
+- User can also update name and photo.
+- Have Social login like github and google.
+- Private and Protected route system.
+- Responsive website.
+
+## NPM Packages
+
+1.AOS Package.
+2.Swiper Slider
+3.Animate.css

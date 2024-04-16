@@ -11,8 +11,6 @@ const UpdateProfile = () => {
 
    
 
-
-
     const {updatePhotoAndName,user}= useContext(AuthContext)
     if(!user){
         navigate("/login")
